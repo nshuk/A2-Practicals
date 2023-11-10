@@ -45,30 +45,30 @@ for i in range (11):
     testString = "test" + str(i)
     resultFlag = Enqueue(testString)
     if resultFlag == False:
-        print("Queue is full")
+        print("Failed, Queue is full")
         print(emptyString)
     else:
-        print("Here's the queue after enqueue:")
+        print("Successful, Here's the queue after enqueue:")
         print(queueArray)
         print(emptyString)
 
 for i in range (2):
     resultFlag = Dequeue()
     if resultFlag == False:
-        print("Queue is empty")
+        print("Failed, Queue is empty")
         print(emptyString)
     else:
-        print("Here's the queue after dequeue:")
+        print("Successful, Here's the queue after dequeue:")
         print(queueArray)
         print(emptyString)
 
 for i in range (8):
     resultFlag = Dequeue()
     if resultFlag == False:
-        print("Queue is empty")
+        print("Failed, Queue is empty")
         print(emptyString)
     else:
-        print("Here's the queue after dequeue:")
+        print("Successful, Here's the queue after dequeue:")
         print(queueArray)
         print(emptyString)
 
@@ -76,9 +76,9 @@ for i in range (65, 76): # capital A ascii starts with 65.
     character = chr(i) # use of chr to turn ascii into char
     resultFlag = Enqueue(character)
     if resultFlag == False:
-        print("Queue is full")
+        print("Failed, Queue is full")
         print(emptyString)
     else:
-        print("Here's the queue after enqueue:")
+        print("Successful, Here's the queue after enqueue:")
         print(queueArray)
         print(emptyString)
