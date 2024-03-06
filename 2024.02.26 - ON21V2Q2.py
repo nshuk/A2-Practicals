@@ -44,7 +44,7 @@ def ReadData():
 numOfPic = ReadData()
 print(numOfPic)
 
-color = input("Enter frame color: ").lower() # use of .lower() tu LCASE the entire string
+color = input("Enter frame color: ").lower().strip() # use of .lower() tu LCASE the entire string. .strip() to remove whitespace
 maxWidth = int(input("Enter max width: "))
 maxHeight = int(input("Enter max height: "))
 print("Here are the ones found:")
@@ -58,7 +58,7 @@ for i in range(numOfPic):
                 print(pictureArray[i].getHeight())
 
 
-# use of strip() to remove the /n
+# use of strip() to remove the /n and also whitespace
 # use of lower() to LCASE the entire string
 # may use upper() instead
 # OOP assigned into array, cant be printed and displayed directly. instead, use get methods to print them out
