@@ -6,6 +6,7 @@ ArrayNode = [[-1, -1, -1] for i in range(20)]
 
 # rows, cols = (20,3)
 # 2DArray = [[item]*cols]*rows
+# eg lain: ArrayNodes = [[-1 for i in range(3)]for j in range(20)]
 
 print(ArrayNode)
 
