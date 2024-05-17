@@ -29,7 +29,7 @@ class Manager(Employee):
         self.__BonusValue = bv
 
     def SetPay(self, weeknum, hours):
-        bonusHours = hours + (hours * self.__BonusValue)
+        bonusHours = hours * (1 + (self.__BonusValue / 100))
         Employee.SetPay(self, weeknum, bonusHours)
 
 
