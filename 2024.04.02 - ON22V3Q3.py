@@ -37,18 +37,18 @@ def SearchValue(Root, ValueToFind): # based on given pseudocode in the question
             return Root
         elif ArrayNode[Root][1] == -1:
             return -1
-    if ArrayNode[Root][1] > ValueToFind: # if the searchvalue is greater than the current node data
-        return SearchValue(ArrayNode[Root][0], ValueToFind) # recursively go down to the right
-    if ArrayNode[Root][1] < ValueToFind: # if the searchvalue is less than the current node data
-        return SearchValue(ArrayNode[Root][2], ValueToFind) # recursively go down the left
+    if ArrayNode[Root][1] > ValueToFind: # if the searchvalue is less than the current node data
+        return SearchValue(ArrayNode[Root][0], ValueToFind) # recursively go down to the left
+    if ArrayNode[Root][1] < ValueToFind: # if the searchvalue is greater than the current node data
+        return SearchValue(ArrayNode[Root][2], ValueToFind) # recursively go down the right
 
 def SearchValue2(Root, ValueToFind): # this one saja nak test. yg ni structure sama dalam github. yang atas tu soalan bagi
     if ValueToFind == ArrayNode[Root][1]:
         return Root
-    elif (ArrayNode[Root][1] > ValueToFind) and (ArrayNode[Root][0] != -1): # if the searchvalue is greater than the current node data
-        return SearchValue(ArrayNode[Root][0], ValueToFind) # recursively go down to the right
+    elif (ArrayNode[Root][1] > ValueToFind) and (ArrayNode[Root][0] != -1): # if the searchvalue is less than the current node data
+        return SearchValue(ArrayNode[Root][0], ValueToFind) # recursively go down to the left
     elif (ArrayNode[Root][1] < ValueToFind) and (ArrayNode[Root][2] != -1): # if the searchvalue is less than the current node data
-        return SearchValue(ArrayNode[Root][2], ValueToFind) # recursively go down the left
+        return SearchValue(ArrayNode[Root][2], ValueToFind) # recursively go down the right
     else:
         return -1
 
