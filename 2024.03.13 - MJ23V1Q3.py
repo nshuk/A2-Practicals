@@ -34,7 +34,7 @@ def ReadData():
 
 def PushColour(DataToPush):
     global ColourTopPointer
-    if ColourTopPointer == 20:
+    if ColourTopPointer == 10:
         return False
     else:
         Colour[ColourTopPointer] = DataToPush
